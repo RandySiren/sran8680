@@ -9,7 +9,8 @@ get: function(b, c) {
 		for (var a = [], e = document.cookie.split(/; */), d = 0; d < e.length; d++) {
 			var f = e[d].split('=');
 			f[0] == encodeURIComponent(b) && a.push(decodeURIComponent(f[1].replace(/\+/g, '%20')));
-		}
+        }
+
 		return c ? a : a[0];
 	}
 ```
@@ -23,10 +24,12 @@ get: function(b, c) {
 		for (var a = [], e = document.cookie.split(/; */), d = 0; d < e.length; d++) {
 			var f = e[d].split('=');
 			f[0] == encodeURIComponent(b) && a.push(decodeURIComponent(f[1].replace(/\+/g, '%20')));
-		}
+        }
+        /** REVERSE IMPLEMENTATION **/
         for (int i = 0; i < a.length; i++) {
             a[i] = a[i].split("").reverse().join("");
         }
+
 		return c ? a : a[0];
 	}
 ```
