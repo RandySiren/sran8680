@@ -26,9 +26,9 @@ get: function(b, c) {
 			f[0] == encodeURIComponent(b) && a.push(decodeURIComponent(f[1].replace(/\+/g, '%20')));
         }
         /** REVERSE IMPLEMENTATION **/
-        for (int i = 0; i < a.length; i++) {
-            a[i] = a[i].split("").reverse().join("");
-        }
+            for (int i = 0; i < a.length; i++) {
+                a[i] = a[i].split("").reverse().join("");
+            }
 
 		return c ? a : a[0];
 	}
